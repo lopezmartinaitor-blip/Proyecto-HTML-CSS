@@ -1,0 +1,240 @@
+/* Proyecto: Street Noise Fest
+  Desarrollador: Aitor Lopez Martin
+  Temática: Festival de música underground
+*/
+
+/* 1. Reset de márgenes y rellenos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Tipografías y Colores de fondo base */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #0d0d0d; /* Fondo muy oscuro, rollo underground */
+    color: #f2f2f2;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Arial Black', Impact, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- ENCABEZADO --- */
+header {
+    background: linear-gradient(135deg, #1a0000 0%, #4d0019 100%);
+    text-align: center;
+    padding: 3rem 1rem;
+    border-bottom: 4px solid #ff0044; /* Bordes */
+}
+
+header img {
+    max-width: 150px;
+    margin-bottom: 1rem;
+    /* Sombras en la imagen para darle efecto neón */
+    filter: drop-shadow(0 0 10px #ff0044); 
+}
+
+header h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8); /* Sombras en texto */
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #ff99b3;
+}
+
+/* --- MENÚ DE NAVEGACIÓN (Uso de Flexbox) --- */
+nav {
+    background-color: #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #333;
+}
+
+nav ul {
+    list-style-type: none; /* Quitamos las viñetas de la lista */
+    display: flex; /* Flexbox obligatorio */
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+/* Selectores de pseudoclases y efectos hover */
+nav a:hover {
+    color: #ff0044;
+    text-shadow: 0 0 8px #ff0044;
+}
+
+/* --- SECCIONES GENERALES --- */
+main {
+    max-width: 1200px;
+    margin: 0 auto; /* Márgenes */
+    padding: 2rem; /* Rellenos */
+}
+
+section {
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background-color: #141414;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5); /* Sombras */
+}
+
+section h2 {
+    color: #ff0044;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/* --- ASIDE --- */
+aside {
+    background-color: #ff0044;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+aside h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* --- CARTEL DE ARTISTAS (Uso de CSS Grid) --- */
+#cartel {
+    display: grid; /* CSS Grid obligatorio */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+#cartel article {
+    background-color: #1f1f1f;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #333; /* Bordes */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cartel article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 0, 68, 0.2); /* Efecto hover con sombra */
+}
+
+#cartel article img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+#cartel article h3 {
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+/* --- TABLA OBLIGATORIA --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #1a1a1a;
+}
+
+table th, table td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #333; /* Bordes de tabla */
+}
+
+table th {
+    background-color: #ff0044;
+    color: white;
+}
+
+/* Pseudoclase nth-child para colores alternos en las filas */
+table tr:nth-child(even) {
+    background-color: #242424;
+}
+
+table tr:hover {
+    background-color: #33141c; /* Hover en tabla */
+}
+
+/* --- FORMULARIO --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    color: #ccc;
+}
+
+input, select, textarea {
+    padding: 0.8rem;
+    background-color: #262626;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #ff0044;
+    box-shadow: 0 0 5px #ff0044; /* Sombra al hacer clic en el input */
+}
+
+button {
+    background-color: #ff0044;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cc0036;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #0a0a0a;
+    text-align: center;
+    padding: 2rem;
+    border-top: 2px solid #333;
+    margin-top: 2rem;
+}
+
+footer p {
+    color: #777;
+    font-size: 0.9rem;
+}
