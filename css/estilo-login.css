@@ -1,0 +1,118 @@
+:root {
+    --color-fondo: #0a0a0a;
+    --color-fucsia: #ff007f;
+    --color-morado: #8a2be2;
+    --color-texto: #ffffff;
+    --color-input: #1a1a1a;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.bg-login {
+    background-color: var(--color-fondo);
+    background-image: radial-gradient(circle at center, #1f001f 0%, #0a0a0a 100%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    padding: 20px;
+}
+
+.login-box {
+    background-color: rgba(20, 20, 20, 0.9);
+    padding: 40px 30px;
+    border-radius: 15px;
+    border: 2px solid var(--color-morado);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5), inset 0 0 10px rgba(255, 0, 127, 0.2);
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.login-logo {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.neon-title {
+    color: var(--color-texto);
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px var(--color-fucsia), 0 0 20px var(--color-fucsia); 
+}
+
+.login-slogan {
+    color: #cccccc;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    color: var(--color-texto);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, select {
+    background-color: var(--color-input);
+    color: var(--color-texto);
+    border: 1px solid #333;
+    padding: 12px;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: var(--color-fucsia);
+    box-shadow: 0 0 8px rgba(255, 0, 127, 0.5);
+}
+
+.neon-button {
+    background: linear-gradient(45deg, var(--color-fucsia), var(--color-morado));
+    color: var(--color-texto);
+    border: none;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.neon-button:hover {
+    box-shadow: 0 0 15px var(--color-fucsia), 0 0 25px var(--color-morado);
+    transform: scale(1.02);
+}
