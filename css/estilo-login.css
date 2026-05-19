@@ -1,7 +1,6 @@
 :root {
     --color-fondo: #0a0a0a;
-    --color-fucsia: #ff007f;
-    --color-morado: #8a2be2;
+    --color-rojo: #ff0044;
     --color-texto: #ffffff;
     --color-input: #1a1a1a;
 }
@@ -33,8 +32,8 @@
     background-color: rgba(20, 20, 20, 0.9);
     padding: 40px 30px;
     border-radius: 15px;
-    border: 2px solid var(--color-morado);
-    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5), inset 0 0 10px rgba(255, 0, 127, 0.2);
+    border: 2px solid var(--color-rojo);
+    box-shadow: 0 0 20px #ff0044, inset 0 0 10px #ff0044;
     text-align: center;
 }
 
@@ -54,7 +53,7 @@
     font-size: 1.8rem;
     margin-bottom: 5px;
     text-transform: uppercase;
-    text-shadow: 0 0 10px var(--color-fucsia), 0 0 20px var(--color-fucsia); 
+    text-shadow: 0 0 10px var(--color-rojo), 0 0 20px var(--color-rojo); 
 }
 
 .login-slogan {
@@ -94,12 +93,12 @@ input, select {
 }
 
 input:focus, select:focus {
-    border-color: var(--color-fucsia);
-    box-shadow: 0 0 8px rgba(255, 0, 127, 0.5);
+    border-color: var(--color-rojo);
+    box-shadow: 0 0 8px #ff0044;
 }
 
 .neon-button {
-    background: linear-gradient(45deg, var(--color-fucsia), var(--color-morado));
+    background: linear-gradient(45deg, var(--color-rojo), var(--color-rojo));
     color: var(--color-texto);
     border: none;
     padding: 15px;
@@ -113,6 +112,6 @@ input:focus, select:focus {
 }
 
 .neon-button:hover {
-    box-shadow: 0 0 15px var(--color-fucsia), 0 0 25px var(--color-morado);
+    box-shadow: 0 0 15px var(--color-rojo), 0 0 25px var(--color-rojo);
     transform: scale(1.02);
 }
