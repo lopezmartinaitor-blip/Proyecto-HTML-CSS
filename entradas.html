@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar Entradas | Street Noise Fest</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio y Cartel</a></li>
+            <li><a href="entradas.html">Venta de Entradas</a></li>
+            <li><a href="login.html">Login Staff</a></li>
+            <li><a href="#contacto">Contacto</a></li> 
+        </ul>
+    </nav>
+
+    <header class="hero-entradas">
+        <h1>🎫 PILLA TU ENTRADA</h1>
+        <p>Aforo limitado. El bloque te espera, no te quedes fuera.</p>
+    </header>
+
+    <main>
+        <section id="info-entradas">
+            <h2>Selecciona tu Abono</h2>
+            <div class="tickets-container">
+                
+                <article class="ticket-card">
+                    <h3>General</h3>
+                    <p class="precio">50€</p>
+                    <ul>
+                        <li>Acceso Viernes y Sábado</li>
+                        <li>Escenarios Principal y Detroit</li>
+                        <li>Pulsera de tela oficial</li>
+                    </ul>
+                </article>
+
+                <article class="ticket-card vip">
+                    <div class="etiqueta-soldout">Últimas 50!</div>
+                    <h3>Abono VIP</h3>
+                    <p class="precio">90€</p>
+                    <ul>
+                        <li>Acceso VIP y Fast-Track</li>
+                        <li>Barras exclusivas y zona de descanso</li>
+                        <li>Merchandising de regalo</li>
+                    </ul>
+                </article>
+
+                <article class="ticket-card">
+                    <h3>Entrada de Día</h3>
+                    <p class="precio">30€</p>
+                    <ul>
+                        <li>Acceso solo Viernes o Sábado</li>
+                        <li>Ideal para ver a tu artista favorito</li>
+                        <li>Pulsera estándar</li>
+                    </ul>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="precios">
+            <h2>Evolución de Precios</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo de Abono</th>
+                        <th>Tramo 1 (Promo)</th>
+                        <th>Tramo 2 (Actual)</th>
+                        <th>Taquilla (Día del evento)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Abono General</td>
+                        <td>35€ (Agotado)</td>
+                        <td>50€</td>
+                        <td>65€</td>
+                    </tr>
+                    <tr>
+                        <td>Abono VIP</td>
+                        <td>70€ (Agotado)</td>
+                        <td>90€</td>
+                        <td>120€</td>
+                    </tr>
+                    <tr>
+                        <td>Entrada de 1 Día</td>
+                        <td>-</td>
+                        <td>30€</td>
+                        <td>40€</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="compra">
+            <h2>Tramita tu compra</h2>
+            <p>Rellena tus datos para recibir los códigos QR de acceso.</p>
+            
+            <form action="#" method="POST" class="formulario-pro">
+                
+                <div class="form-grupo">
+                    <label for="nombre_comprador">Nombre completo:</label>
+                    <input type="text" id="nombre_comprador" name="nombre_comprador" placeholder="Ej. Aitor..." required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="email_comprador">Correo electrónico:</label>
+                    <input type="email" id="email_comprador" name="email_comprador" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="seleccion_entrada">Selecciona tu entrada:</label>
+                    <select id="seleccion_entrada" name="seleccion_entrada">
+                        <option value="general">Abono General - 50€</option>
+                        <option value="vip">Abono VIP - 90€</option>
+                        <option value="viernes">Entrada Viernes - 30€</option>
+                        <option value="sabado">Entrada Sábado - 30€</option>
+                    </select>
+                </div>
+
+                <div class="form-grupo">
+                    <label for="comentarios">Peticiones especiales (movilidad reducida, alergias...):</label>
+                    <textarea id="comentarios" name="comentarios" rows="3" placeholder="Escribe aquí..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-comprar">Proceder al pago seguro</button>
+                
+            </form>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <p>&copy; 2026 Street Noise Fest. Todos los derechos reservados.</p>
+        <p>Contacto: info@streetnoisefest.com</p>
+    </footer>
+
+</body>
+</html>
